@@ -1,0 +1,8 @@
+FROM python:3.11.8
+
+WORKDIR /usr/team-9-project-docker
+COPY requirements.txt /usr/team-9-project-docker/
+RUN pip install --no-cache-dir -r requirements.txt
+COPY *.py .
+
+CMD ["python", "Team9Project.py"]
